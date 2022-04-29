@@ -1,0 +1,115 @@
+html{
+	width: 100%;
+	height: 100%;
+	font-family: monospace;
+	font-size: 1.8vh;
+	color: #EEEDE4;
+	text-transform: uppercase;
+}
+body{ 
+	height: 100vh; 
+	width: 100vw;
+	margin: 0;
+    
+
+}
+.container{
+	width: 100%;
+	height: 100%;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+}
+section{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	scroll-snap-align: center;
+	background: #101010;
+}
+
+#home{
+
+}
+
+#home div p:nth-child(1){
+	font-size: 5vh;
+	line-height: 5vh;
+	margin-bottom: 0;
+}
+#home div:nth-child(1){
+	position: relative;
+	right: -4vw;
+}
+
+
+#skills div:nth-child(1){
+
+	width: 50vw;
+}
+#skillsimg{
+	position: relative;
+	transform: translateY(150px);
+	opacity: 0;
+	transition: 1s all ease;
+}
+#skillsimg.active{
+	transform: translateY(0);
+	opacity: 1;
+}
+
+#skills div img:nth-of-type(1){
+	left: 20vw;
+	top: 7%;
+	width: 57vh;
+}
+#skills div img:nth-of-type(2){
+	left: 10vw;
+	top: 35%;
+	width: 57vh;
+}
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 7%;
+	color: #EEEDE4;
+	background: #101010;
+	display: inline-block;
+	justify-content: center;
+	border-bottom: 1px solid #EEEDE4;
+}
+
+.footer{
+	background: #101010;
+	position: fixed;
+	bottom: 1%;
+	left: 0;
+	width: 100%;
+	height: 9%;
+	color: #EEEDE4;
+	text-align: center;
+}
+
+}
+.footer p{
+}
+
+.header nav{
+	text-align: center;
+	margin-top: 1%;
+}
+.header nav a{
+	color: #EEEDE4;
+	text-decoration: none;
+	padding: 0 2%;
+}
+.header nav a:hover{
+	text-decoration: underline;
+	cursor: crosshair;
+}
+
