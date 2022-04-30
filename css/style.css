@@ -33,7 +33,7 @@ section{
 	height: 100vh;
 	scroll-snap-align: center;
 	background: #101010;
-	background-image: url("img/space.jpg");
+	background-image: url("../img/space.jpg");
 }
 
 
