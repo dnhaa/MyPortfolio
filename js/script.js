@@ -73,18 +73,3 @@ frights.forEach(fright => {
   observer.observe(fright)
 })
 
-
-let openBtn = document.querySelector(".openSideNav");
-openBtn.addEventListener("click", () => {
-  showNav();
-});
-let closeBtn = document.querySelector(".closeBtn");
-closeBtn.addEventListener("click", () => {
-  hideNav();
-});
-function showNav(){
-  document.querySelector("#about").style.opacity = "100%";
-}
-function hideNav(){
-  document.querySelector("#about").style.opacity = "0";
-}
