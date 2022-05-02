@@ -46,6 +46,7 @@ section{
 	scroll-snap-align: center;
 	background: #090909;
 	background-image: url("../img/space.jpg");
+	flex-wrap: wrap
 }
 
 
@@ -73,7 +74,7 @@ section{
 	width: 56vh;
 	position: relative;
 	z-index: 9;
-	transform: translateY(8vh);
+	transform: translateY(7.3vh);
 }
 #skills div img:nth-of-type(2){
 	transform: translateY(-8vh);
@@ -126,7 +127,6 @@ section{
 }
 #works img:hover{
 	opacity: 75%;
-	cursor: url("../img/cursor1.png"), pointer;
 }
 
 #education div:nth-child(1){
@@ -164,10 +164,9 @@ section{
 #education table tr:hover{
 	color: #090909;
 	background: #EEEDE4;
-	cursor: url("../img/cursor1.png"), pointer;
 }
 
-#contact div{
+#contact div:nth-child(1){
 	background: #EEEDE4;
 	height: 30vh;
 	width: 32vw;
@@ -187,9 +186,8 @@ section{
 
 #contact div a img:hover {
 	width: 2.6vw;
-	transition-timing-function: ease;
-	transition: .3s;
-	cursor: url("../img/cursor1.png"), pointer;
+	/*transition-timing-function: ease;*/
+	transition: .6s ease;
 }
 
 
@@ -208,7 +206,7 @@ section{
 }
 
 .footer{
-	background: #090909;
+	background: none;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -236,7 +234,6 @@ section{
 }
 .header nav a:hover{
 	text-decoration: underline;
-	cursor: url("../img/cursor1.png"), pointer;
 }
 .header nav a:after{
 	content: "";
@@ -244,6 +241,7 @@ section{
 	height: 100%;
 }
 
+/*
 #leftmenu{
 	width: 8vw;
 	height: 8vh;
@@ -255,7 +253,7 @@ section{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
+}*/
 
 .rightmenu{
 	width: 6vw;
@@ -273,8 +271,8 @@ section{
 .rightmenu:hover{
 	background: #EEEDE4;
 	color: #090909;
-	transition-timing-function: 0.4s;
-	cursor: url("../img/cursor1.png"), pointer;
+	transition: 1s ease-out;
+	cursor: pointer;
 }
 
 
@@ -288,11 +286,19 @@ section{
 	z-index: 5;
 	transform: translateX(110%);
 	transition: transform 0.5s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 
 }
 
 .about p{
-	margin: 49vh 25vw;
+	width: 50vw;
+}
+
+.about img{
+	width: 20vh;
 }
 
 #menuBtn{
@@ -302,7 +308,21 @@ section{
 #menuBtn:checked ~ .about{
 	transform: translateX(0);
 }
+#menuBtn:checked ~ * .rightmenu{
+	color: #090909;
+}
 
+.navigate{
+	/*width: 1vw;
+	height: 1vh;*/
+	position: relative;
+	transform: rotate(270deg);
+	opacity: 50%;
+	font-size: 10vh;
+	z-index: 9;
+	bottom: -10vw;
+	
+}
 
 
 
@@ -348,18 +368,8 @@ section{
 }
 
 
-/*@media{
-	#skills div img:nth-child(1){
-		animation-name: float-down;
-		
-		animation-duration: 2.5s;
-		
-	}
-	#skills div img:nth-child(2){
-		animation-name: float-up;
-		animation-duration: 2.5s;
-	}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #090909;
+  }
 }
-*/
-/*animation-iteration-count: infinite;*/
-/*animation-delay: 1s;
